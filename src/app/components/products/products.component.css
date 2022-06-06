@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+h1{
+    font-family: 'Suez One';
+    text-align: center;
+    margin: 20px;
+}
+
+label, input, button, p {
+    font-family: 'Raleway';
+}
+
+label{
+    font-weight: bold;
+}
+
+#addBtn{
+    margin: 20px;
+}
+
+input{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#cajaAddBtn, #btnMenu{
+    display: flex;
+    justify-content: center;
+}
+
+#caja1{
+    margin-top: 20px;
+    padding: 30px;
+    background-color: #DAF7A6;
+    border-radius: 8px;
+    height: 470px;
+}
+
+#caja2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+}
+
+#infoP{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p{
+    text-align: center;
+}
+
+#infoBtn{
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 45px;
+}

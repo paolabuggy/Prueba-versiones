@@ -1,0 +1,34 @@
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/menu"><i class="fas fa-sign-out-alt"></i>Regresar al menú principal</a>
+</nav>
+
+<div [hidden]="user">
+    <h1>Log In con Firebase Authentication MSG</h1>
+    <div class="container">
+        <label for="phone" id="lbNum">Número de teléfono</label>
+        <div id="cajaNum">
+            <input type="text" [(ngModel)]="phoneNumber.country" id="num" class="input" placeholder="1" maxlength="2">
+            <input type="text" [(ngModel)]="phoneNumber.area" id="num" class="input" placeholder="949" maxlength="3">
+            <input type="text" [(ngModel)]="phoneNumber.prefix" id="num" class="input" placeholder="555" maxlength="3">
+            <input type="text" [(ngModel)]="phoneNumber.line" id="num" class="input" placeholder="5555" maxlength="4">
+        </div>
+        <div id="recaptcha-container"></div>
+
+        <button (click)="sendLoginCode()" class="btn btn-outline-info">SMS Text Login Code</button>
+
+        <div *ngIf="windowRef.confirmationResult">
+            <hr>
+            <label for="code" id="lbNum">Ingrese el código de verificación</label>
+            <input type="text" name="code" id="num" [(ngModel)]="verificationCode">
+
+            <button (click)="verifyLoginCode()" class="btn btn-outline-danger">Verificar</button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="user" id="successMSG">
+    <p>¡Ha iniciado sesión correctamente con su número de teléfono!</p>
+    <p>UserId: {{ user?.uid }}</p>   
+    
+    <button (click)="logOut()" class="btn btn-danger">Cerrar sesión</button>
+</div>

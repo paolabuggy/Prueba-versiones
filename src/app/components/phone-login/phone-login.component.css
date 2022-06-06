@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.navbar-brand{
+    margin-left: 30px;
+    font-size: 15px;
+    font-family: 'Raleway';
+    font-weight: bold;
+}
+
+h1{
+    font-family: 'Suez One';
+    text-align: center;
+    margin: 20px;
+    font-size: 40px;
+}
+
+label, input, button, p, #successMSG {
+    font-family: 'Raleway';
+    font-size: 20px;
+}
+
+p{
+    margin: 20px;
+    text-align: center;
+}
+
+#num{
+    margin: 10px;
+    width: 140px;
+}
+
+#cajaNum{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#lbNum{
+    margin:10px;
+}
+
+label{
+    font-weight: bold;
+}
+
+button{
+    margin: 20px;
+}
+
+#recaptcha-container{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}

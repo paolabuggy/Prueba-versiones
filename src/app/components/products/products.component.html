@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4" id="caja1">
+            <h1>Productos</h1>
+            <form (ngSubmit)="newProduct(newProductForm.value)" [formGroup]="newProductForm">
+                <input type="hidden" formControlName="id">
+
+                <label for="nombre">Nombre</label>
+                <input class="form-control" type="text" formControlName="nombre">
+                <label for="url_img" style="margin-top: 20px;">Url de la imagen</label>
+                <input class="form-control" type="url" formControlName="url">
+                <div id="cajaAddBtn">
+                    <input type="submit" id="addBtn" class="btn btn-outline-danger" [disabled]="!newProductForm.valid"
+                    [value]="(currentStatus == 1) ? 'Dar de alta' : 'Editar'">
+                </div>
+                <div id="btnMenu">
+                    <button type="button" class="btn btn-info" routerLink="/menu">Regresar al menú principal</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-8" id="caja2">
+            <h1 style="font-size: 20px;">Productos disponibles</h1>
+            <div *ngFor="let product of products" id="infoP">
+                <div class="figure">
+                    <img [src]="product.data.url" height="200px" width="200px">
+                </div>
+                <div id="infoBtn">
+                    <p>{{product.data.nombre}}</p>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-info" (click)="editProduct(product.id)">Editar</button>
+                        <button type="button" class="btn btn-danger"
+                            (click)="deleteProduct(product.id)">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

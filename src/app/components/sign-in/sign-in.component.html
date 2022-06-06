@@ -1,0 +1,26 @@
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/menu"><i class="fas fa-sign-out-alt"></i>Regresar al menú principal</a>
+</nav>
+
+<div class="displayTable">
+    <div class="displayTableCell">
+        <div class="authBlock">
+            <h3>Iniciar Sesión</h3>
+            <div class="formGroup">
+                <input type="text" class="formControl" placeholder="Email" #userName required>
+            </div>
+            <div class="formGroup">
+                <input type="password" class="formControl" placeholder="Password" #userPassword required>
+            </div>
+            <!-- Se llama a SignIn Api desde AuthService -->
+            <div class="formGroup">
+                <input type="button" class="btn btnPrimary" value="Log in"
+                    (click)="authService.SignIn(userName.value, userPassword.value)">
+            </div>
+            
+        </div>
+        <div class="redirectToLogin">
+            <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Crear Usuario</span></span>
+        </div>
+    </div>
+</div>

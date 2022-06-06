@@ -1,0 +1,30 @@
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/menu"><i class="fas fa-sign-out-alt"></i>Regresar al menú principal</a>
+</nav>
+
+<div class="displayTable">
+    <div class="displayTableCell">
+        <div class="authBlock">
+            <h3>Crear Usuario</h3>
+            <div class="formGroup">
+                <input type="text" class="formControl" placeholder="Nombre de Usuario" #userName required />
+            </div>
+            <div class="formGroup">
+                <input type="email" class="formControl" placeholder="Correo Electrónico" #userEmail required />
+            </div>
+            <div class="formGroup">
+                <input type="password" class="formControl" placeholder="Contraseña" #userPwd required />
+            </div>
+            <div class="formGroup">
+                <!-- Se llama a SignUp Api desde AuthService -->
+                <input type="button" class="btn btnPrimary" value="Crear usuario"
+                    (click)="authService.SignUp(userName.value, userEmail.value, userPwd.value)" />
+            </div>
+
+            </div>
+            <div class="redirectToLogin">
+                <span>Already have an account?
+                    <span class="redirect" routerLink="/sign-in">Iniciar Sesión</span></span>
+            </div>
+    </div>
+</div>
