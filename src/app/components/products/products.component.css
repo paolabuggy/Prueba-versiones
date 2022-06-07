@@ -5,6 +5,7 @@ h1{
     font-family: 'Suez One';
     text-align: center;
     margin: 20px;
+    color: brown;
 }
 
 label, input, button, p {
