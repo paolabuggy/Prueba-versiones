@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 h1{
-    font-family: 'Suez One';
+    /*font-family: 'Suez One';*/
+    font-family: 'Raleway';
     text-align: center;
     margin: 20px;
     color: brown;
