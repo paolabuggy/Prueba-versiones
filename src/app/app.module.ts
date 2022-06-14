@@ -25,6 +25,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { AuthService } from './shared/services/auth.service';
 
 import firebase from "firebase/compat/app";
+import { EjemploComponent } from './ejemplo/ejemplo.component';
 firebase.initializeApp(environment.firebaseConfig);
 
 @NgModule({
@@ -35,7 +36,8 @@ firebase.initializeApp(environment.firebaseConfig);
     ProductsComponent,
     SignInComponent,
     SignUpComponent,
-    MenuComponent
+    MenuComponent,
+    EjemploComponent
   ],
   imports: [
     BrowserModule,
